@@ -1,9 +1,10 @@
 DpastorSample::Application.routes.draw do
-  get "static_pages/index"
 
-  get "static_pages/sobremi"
+  root to: 'static_pages#index'
 
-  get "static_pages/contacto"
+  match '/sobremi', to: 'static_pages#sobremi'
+
+  match '/contacto', to: 'static_pages#contacto'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
